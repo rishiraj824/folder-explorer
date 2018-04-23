@@ -1,19 +1,23 @@
 {
   "root": {
+    "level":0,
     "name": "Home",
     "folders": [{
+        "level":1,
         "name": "Documents",
         "folders": [],
         "link": "home/Documents"
       },
       {
         "name": "rishi",
+        "level":1,
         "folders": [{
           "name": "Desktop",
+          "level":2,
           "folders": [],
           "link": "home/rishi/Desktop"
         }],
-        "link": "home/rishi"
+        "link":"home/Documents"
       }
     ],
     "link": "home"

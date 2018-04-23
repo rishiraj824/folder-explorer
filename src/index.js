@@ -13,13 +13,15 @@ import { applyMiddleware, compose, createStore } from 'redux';
 import { ConnectedRouter , connectRouter, routerMiddleware } from 'connected-react-router';
 import { createBrowserHistory } from 'history';
 import reduxThunk from 'redux-thunk';
+import { createLogger } from 'redux-logger';
 
 const history = createBrowserHistory()
+const logger = createLogger();
 const store = createStore(
   connectRouter(history)(reducers),
   compose(
     applyMiddleware(
-      reduxThunk,routerMiddleware(history),
+      logger,reduxThunk,routerMiddleware(history)
     ),
   ),
 )

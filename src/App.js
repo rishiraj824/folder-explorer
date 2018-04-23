@@ -11,10 +11,11 @@ class App extends React.Component {
     const oldFolder = this.props.root;
     const links = this.props.root.link;
     const folders = this.props.root.folders;
+    const level = this.props.root.level;
     return (
       <div className="App">
         <Header links={links} />
-        <button onClick={()=>this.props.createFolder(links,folders)} className="btn">Create New Folder</button>
+        <button onClick={()=>this.props.createFolder(links,level)} className="btn">Create New Folder</button>
         <FolderTree folders={folders} oldFolder={oldFolder} />
       </div>
     );
