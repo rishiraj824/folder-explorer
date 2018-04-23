@@ -1,0 +1,3 @@
+export const CREATE_FOLDER = 'CREATE_FOLDER';
+export const LOAD_FOLDER = 'LOAD_FOLDER';
+export const PREVIOUS_FOLDER ='PREVIOUS_FOLDER';

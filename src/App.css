@@ -1,0 +1,64 @@
+.App{
+  margin: auto;
+  min-height: 100vh;
+  overflow: hidden;
+  max-width: 900px;
+  padding: 10px;
+}
+.left-img{
+  height: 40px;
+  cursor: pointer;
+}
+.header ul li{
+  list-style-type: none;
+  margin-right: 5px;
+  align-self: center;
+  cursor: pointer;
+}
+.header ul {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.btn{
+  font-size: 14px;
+  display: block;
+}
+.fl-rt{
+  float: right;
+}
+.folders ul li{
+  cursor: pointer;
+  list-style-type: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 5px;
+  height: 70px;
+}
+
+.folders ul li:hover{
+  background: #f7f7f7;
+}
+.folders ul li img{
+  margin-right: 10px;
+  vertical-align: middle;
+  height: 70px;
+  line-height: 70px;
+  align-items: center;
+}
+.folders ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0px;
+}
+a{
+  text-decoration: none;
+}
+.msg{
+  text-align: center;
+}

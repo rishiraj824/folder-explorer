@@ -1,0 +1,21 @@
+{
+  "root": {
+    "name": "Home",
+    "folders": [{
+        "name": "Documents",
+        "folders": [],
+        "link": "home/Documents"
+      },
+      {
+        "name": "rishi",
+        "folders": [{
+          "name": "Desktop",
+          "folders": [],
+          "link": "home/rishi/Desktop"
+        }],
+        "link": "home/rishi"
+      }
+    ],
+    "link": "home"
+  }
+}
