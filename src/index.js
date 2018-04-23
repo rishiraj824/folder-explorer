@@ -13,12 +13,10 @@ import { applyMiddleware, compose, createStore } from 'redux';
 import { ConnectedRouter , connectRouter, routerMiddleware } from 'connected-react-router';
 import { createBrowserHistory } from 'history';
 import reduxThunk from 'redux-thunk';
-import initialState from './data.json';
 
 const history = createBrowserHistory()
 const store = createStore(
   connectRouter(history)(reducers),
-  initialState,
   compose(
     applyMiddleware(
       reduxThunk,routerMiddleware(history),

@@ -8,16 +8,14 @@ import * as actions from './actions';
 
 class App extends React.Component {
   render() {
+    const oldFolder = this.props.root;
     const links = this.props.root.link;
     const folders = this.props.root.folders;
     return (
       <div className="App">
         <Header links={links} />
-        {this.props.root.name!=='Home'&&
-          <img src="/images/left.png" alt="left" className="left-img" onClick={()=>this.props.loadPrevious(folders)} />
-        }
-        <button onClick={()=>this.props.createFolder(links)} className="btn">Create New Folder</button>
-        <FolderTree folders={folders} />
+        <button onClick={()=>this.props.createFolder(links,folders)} className="btn">Create New Folder</button>
+        <FolderTree folders={folders} oldFolder={oldFolder} />
       </div>
     );
   }

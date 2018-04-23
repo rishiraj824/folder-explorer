@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
 import * as ActionTypes from './../constants/types';
+import initialState from '../data.json';
+import update from 'react-addons-update';
 
-export function folderReducer(state = {folders:[],name:"",link:""},action){
+export function folderReducer(state = initialState.root,action){
   switch(action.type){
     case ActionTypes.LOAD_FOLDER:
       return {...action.payload};
@@ -18,6 +20,7 @@ export function folderReducer(state = {folders:[],name:"",link:""},action){
       return {...state};
   }
 }
+
 
 const rootReducer = combineReducers({
   root:folderReducer

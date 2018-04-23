@@ -1,13 +1,13 @@
 import * as ActionTypes from '../constants/types';
 
-export function createFolder(links){
+export function createFolder(links,folders){
     return function(dispatch){
         dispatch({
             type: ActionTypes.CREATE_FOLDER, 
             message: 'Folder Created',
             payload:[{
-                name:"New Folder",
-                link:`${links}/New Folder`,
+                name:`NewFolder`,
+                link:`${links}/NewFolder`,
                 folders:[]
             }]
         });
@@ -15,6 +15,7 @@ export function createFolder(links){
 }
 
 export function loadPrevious(folder){
+    console.log(folder);
     return function(dispatch){
         dispatch({
             type: ActionTypes.PREVIOUS_FOLDER,

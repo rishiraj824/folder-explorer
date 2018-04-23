@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-
-function mapStateToProps(state) {
-    return {
-
-    };
-}
+import PropTypes from 'prop-types';
 
 class Header extends Component {
     render() {
@@ -23,7 +18,8 @@ class Header extends Component {
         );
     }
 }
+Header.propTypes = {
+    links: PropTypes.string.isRequired
+};
 
-export default connect(
-    mapStateToProps,
-)(Header);
+export default Header;
